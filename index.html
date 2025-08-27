@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olá, aniversariante!</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="email-bg">
+  <div class="container">
+    <h1>Olá, aniversariante!</h1>
+    <p>Tenho uma mensagem para você, mas para seguir, você precisa acertar a senha.</p>
+    <p class="hint">A senha é a mesma que você utiliza para acessar o Outlook<br>
+    <span style="font-size:0.95em;color:#888;">(dizem por aí que tem relação com o maior time do Brasil)</span></p>
+    <input type="password" id="senha" placeholder="Digite a senha...">
+    <br>
+    <button onclick="verificarSenha()">Acessar Mensagem</button>
+  </div>
+  <script>
+    function verificarSenha() {
+      const senhaCorreta = "Fluminense1902*";
+      const senha = document.getElementById("senha").value;
+      if (senha === senhaCorreta) {
+        window.location.href = "pagina02.html";
+      } else {
+        alert("Senha incorreta. Tente novamente.");
+      }
+    }
+  </script>
+</body>
+</html>

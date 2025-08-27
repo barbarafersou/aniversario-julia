@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz aniversário, Julea!</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="sunset-bg">
+  <div class="container">
+    <!-- Música e mensagem personalizada -->
+    <div class="music" style="margin-bottom:28px;">
+      <p style="font-size:1em;color:#993300;">
+        Antes de começar, nada melhor que ler ouvindo uma músiquinha (não qualquer músiquinha, não é mesmo?)<br>
+        <span style="font-size:0.9em;color:#888;">
+          Se não tocar automaticamente, clique no player abaixo para ouvir.
+        </span>
+      </p>
+      <iframe width="320" height="80"
+        src="https://www.youtube.com/embed/yMwi16KYqFo?autoplay=1&loop=1&playlist=yMwi16KYqFo"
+        frameborder="0"
+        allow="autoplay"></iframe>
+      <p style="margin-top:8px;">
+        <a href="https://youtu.be/yMwi16KYqFo?si=jaw6ZA1ZtKeH8L6J" target="_blank" style="color:#FF8C00;text-decoration:underline;">
+          Ouça no YouTube
+        </a>
+      </p>
+    </div>
+    
+    <!-- Título e mensagem de feliz aniversário -->
+    <h1>Feliz aniversário, Julea!</h1>
+    <p class="small" style="margin-bottom:20px;">
+      Hoje é um dia especial e eu não poderia deixar de te desejar um feliz aniversário, que esse novo ciclo seja repleto de felicidade e saúde! Que Deus te abençoe imensamente e ilumine sempre o seu caminho. Você merece as melhores coisas do mundo, porque é uma pessoa maravilhosa.
+    </p>
+    
+    <p class="small" style="margin-bottom:20px;">
+      Você é incrivelmente linda, por fora e por dentro. Tem os olhos castanhos, os mais lindos que já vi, e um sorriso que poderia iluminar o sul da Bahia inteiro! E eu nem comecei a falar do seu coração, que é imenso, e que seja sempre assim, puro (mesmo que o mundo não mereça).
+    </p>
+
+    <p class="small" style="margin-bottom:20px;">
+      Você é uma pessoa magnífica, Júlia! Tem uma personalidade única, que não dá nem para descrever direito, porque é tão sua, tão autêntica. Você é como um pôr do sol, é reggae, é acarajé, é pagodão baiano, é tudo isso e muito mais. Tudo isso é o que me faz lembrar de você.
+    </p>
+
+    <p class="small" style="margin-bottom:20px;">
+      Quem te tem, tem sorte! Obrigada por cada momento compartilhado, por me deixar permitir conhecer cada detalhe seu. Foi maravilhoso poder passar um tempo com você, e sou muito grata por isso.
+    </p>
+
+    <p class="small" style="margin-bottom:20px;">
+      Neste dia tão especial, além de desejar todas as coisas boas do mundo (sem contar eu, claro), eu quero te desejar coragem. Coragem para realizar todos os seus sonhos que um dia você compartilhou comigo.
+    </p>
+
+    <p class="small" style="margin-bottom:20px;">
+      E, claro, não podia deixar de lembrar: você me deve uma noite em Arraial e uma jantinha de comida japonesa, por sua conta, claro (caloteira, agora eu sei onde você mora!)
+    </p>
+
+    <p class="small" style="margin-bottom:20px;">
+      Parabéns! Um abraço.
+    </p>
+
+    <p style="margin-top:30px; font-size:1.05em; color:#d2691e; font-weight:bold;">
+      E aqui estão nossas fotinhas, para você lembrar um pouquinho dos momentos que passamos juntas.
+    </p>
+
+    <div class="carousel">
+      <img id="carousel-img" src="fotos/foto1.jpg" alt="Foto especial">
+      <br>
+      <button onclick="mudarFoto(-1)">&#8592;</button>
+      <button onclick="mudarFoto(1)">&#8594;</button>
+    </div>
+    
+    <div class="next">
+      <p>E para finalizar, tenho mais uma surpresa para você:</p>
+      <a href="pagina03.html" class="btn">Clique aqui</a>
+    </div>
+  </div>
+
+  <script>
+    const fotos = [
+      "fotos/foto1ddddddddddddddddddddddddddddddddddddd.jpg",
+      "fotos/foto2.jpg",
+      "fotos/foto3.jpg"
+    ];
+    let idx = 0;
+    function mudarFoto(dir) {
+      idx = (idx + dir + fotos.length) % fotos.length;
+      document.getElementById('carousel-img').src = fotos[idx];
+    }
+  </script>
+</body>
+</html>
